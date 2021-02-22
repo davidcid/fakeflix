@@ -1,9 +1,10 @@
 import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
-import {}
+import { Profiles } from "../components";
 
 export function SelectProfileContainer({ user, setProfile }) {
+  console.log(user);
   return (
     <>
       <Header bg={false}>
@@ -15,10 +16,10 @@ export function SelectProfileContainer({ user, setProfile }) {
       <Profiles>
         <Profiles.Title>Who's watching?</Profiles.Title>
         <Profiles.List>
-          <Profile.User>
+          <Profiles.Item>
             <Profiles.Picture src={user.photoURL} />
             <Profiles.Name>{user.displayName}</Profiles.Name>
-          </Profile.User>
+          </Profiles.Item>
         </Profiles.List>
       </Profiles>
     </>
