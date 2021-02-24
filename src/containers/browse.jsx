@@ -2,7 +2,7 @@ import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
 import { FooterContainer } from "./footer";
 import { useContext, useEffect, useState } from "react";
-import { Card, Header, Loading } from "../components";
+import { Card, Header, Loading, Player } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
@@ -99,7 +99,10 @@ export function BrowseContainer({ slides }) {
               ))}
             </Card.Entities>
             <Card.Feature category={category}>
-              <p>Hello</p>
+              <Player>
+                <Player.Button />
+                <Player.Video src="/videos/bunny.mp4" />
+              </Player>
             </Card.Feature>
           </Card>
         ))}
