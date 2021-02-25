@@ -38,6 +38,17 @@ export default function Signin() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
+          <Form.Text>
+            If you want to test the App please try with:
+            <ul>
+              <li>
+                <strong>user:</strong> test@test.com
+              </li>
+              <li>
+                <strong>password:</strong> 123456
+              </li>
+            </ul>
+          </Form.Text>
           {error && <Form.Error>{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignin} method="POST">
